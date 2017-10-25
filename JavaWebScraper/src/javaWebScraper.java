@@ -15,6 +15,9 @@ public class javaWebScraper {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        Webpuller test = new Webpuller();
+        String t = "http://shadowrun.itemcards.com/language/arabic/female";
+        test.docPull(t);
     }
     
 }
