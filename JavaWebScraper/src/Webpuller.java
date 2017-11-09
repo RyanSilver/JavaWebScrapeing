@@ -19,12 +19,14 @@ public class Webpuller {
     public void docPull(String s){
         try{
             Document doc = Jsoup.connect(s).get();
-            Element content = doc.getElementById("content");
-            Elements links = content.getElementsByTag("li");
-            for (Element link : links) {
-            String title = link.data();
-            System.out.println(title);
-            }
+            System.out.print(doc);
+            Elements content = doc.select("name");
+            System.out.println(content);
+            //System.out.println(links);
+            //for (Element link : links) {
+            //    String title = link.data();
+            //System.out.println(title);
+            //}
         }//try
         catch(Exception ex){
             
